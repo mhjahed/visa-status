@@ -10,8 +10,8 @@
     // 🔧 DEVELOPER: CHANGE THESE AS NEEDED
     // ============================================
     const SITE_VERSION = '2.0.2';
-    const LAST_UPDATE = "2026-02-25T10:30:00";   // Format: YYYY-MM-DDTHH:MM:SS
-    const NEXT_UPDATE = "2026-02-26T18:00:00";   // Must be FUTURE date!
+    const LAST_UPDATE = "2026-02-25T13:30:00";   // Format: YYYY-MM-DDTHH:MM:SS
+    const NEXT_UPDATE = "2026-02-25T22:00:00";   // Must be FUTURE date!
     // ============================================
 
     const VERSION_KEY = 'visa_status_version';
