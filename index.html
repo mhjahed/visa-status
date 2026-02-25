@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Tracker - Choose Platform</title>
+    
+    <!-- ============================================
+         🚫 CACHE CONTROL - PREVENT CACHING
+         ============================================ -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://flagcdn.com/48x36/au.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS with version -->
+    <link rel="stylesheet" href="style.css?v=2.0.2">
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading fresh content...</p>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animated">
+        <div class="bg-gradient"></div>
+        <div class="bg-pattern"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Version Badge -->
+        <div class="version-badge" id="versionBadge" title="Click to force refresh">
+            <i class="bi bi-patch-check-fill"></i>
+            <span>v2.0.2</span>
+        </div>
+
+        <!-- Header Section -->
+        <header class="header-section">
+            <div class="flag-container">
+                <img src="https://flagcdn.com/96x72/au.png" alt="Australian Flag" class="flag-img">
+            </div>
+            <h1 class="main-title">
+                <i class="bi bi-airplane-fill plane-icon"></i>
+                Australian Student Visa Tracker
+            </h1>
+            <p class="subtitle">Track and monitor student visa applications with real-time updates</p>
+            
+            <!-- Live Status Badge -->
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>All Systems Operational</span>
+            </div>
+        </header>
+
+        <!-- Update Info Section -->
+        <section class="update-info-section">
+            <div class="update-info-container">
+                <!-- Last Update Card -->
+                <div class="update-card last-update">
+                    <div class="update-card-glow"></div>
+                    <div class="update-card-inner">
+                        <div class="update-card-icon">
+                            <i class="bi bi-calendar-check-fill"></i>
+                        </div>
+                        <div class="update-card-content">
+                            <h3 class="update-card-title">
+                                <i class="bi bi-arrow-repeat spinning"></i>
+                                Last Updated
+                            </h3>
+                            <p class="update-card-value" id="lastUpdateDisplay">Loading...</p>
+                            <p class="update-card-footer">
+                                <i class="bi bi-check-circle"></i>
+                                Data is up to date
+                            </p>
+                        </div>
+                        <div class="update-card-badge badge-latest">
+                            <span class="pulse-dot"></span>
+                            Latest
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Update Card with Countdown -->
+                <div class="update-card next-update" id="nextUpdateCard">
+                    <div class="update-card-glow"></div>
+                    <div class="update-card-inner">
+                        <div class="update-card-icon">
+                            <i class="bi bi-bell-fill"></i>
+                        </div>
+                        <div class="update-card-content">
+                            <h3 class="update-card-title">
+                                <i class="bi bi-clock-fill"></i>
+                                Next Update In
+                            </h3>
+                            <div class="countdown-timer" id="countdownTimer">
+                                <div class="countdown-item">
+                                    <div class="countdown-value-wrapper">
+                                        <span class="countdown-value" id="days">00</span>
+                                    </div>
+                                    <span class="countdown-label">Days</span>
+                                </div>
+                                <span class="countdown-separator">:</span>
+                                <div class="countdown-item">
+                                    <div class="countdown-value-wrapper">
+                                        <span class="countdown-value" id="hours">00</span>
+                                    </div>
+                                    <span class="countdown-label">Hours</span>
+                                </div>
+                                <span class="countdown-separator">:</span>
+                                <div class="countdown-item">
+                                    <div class="countdown-value-wrapper">
+                                        <span class="countdown-value" id="minutes">00</span>
+                                    </div>
+                                    <span class="countdown-label">Mins</span>
+                                </div>
+                                <span class="countdown-separator">:</span>
+                                <div class="countdown-item">
+                                    <div class="countdown-value-wrapper">
+                                        <span class="countdown-value" id="seconds">00</span>
+                                    </div>
+                                    <span class="countdown-label">Secs</span>
+                                </div>
+                            </div>
+                            <p class="expired-text" id="expiredText" style="display: none;">
+                                <i class="bi bi-hourglass-split"></i>
+                                Update Available Soon!
+                            </p>
+                            <p class="update-card-footer">
+                                <i class="bi bi-bell"></i>
+                                Stay tuned for updates
+                            </p>
+                        </div>
+                        <div class="update-card-badge badge-upcoming" id="nextUpdateBadge">
+                            <span class="pulse-dot"></span>
+                            <span id="badgeText">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Cards Section -->
+        <section class="platforms-section">
+            <h2 class="section-title">Choose Your Platform</h2>
+            <p class="section-subtitle">Select any platform below to access the Visa Tracker</p>
+            
+            <div class="platforms-grid">
+                <!-- Netlify Card -->
+                <div class="platform-card netlify">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="platform-icon">
+                            <i class="bi bi-cloud-fill"></i>
+                        </div>
+                        <h3 class="platform-name">Netlify</h3>
+                        <p class="platform-desc">Primary Server • Fast & Reliable</p>
+                        <div class="platform-status online">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Online</span>
+                        </div>
+                        <a href="https://699eaf22958c4eeebe3a38da--cheery-froyo-61cd3f.netlify.app/" target="_blank" class="platform-btn">
+                            <span>Open Netlify</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="card-badge primary">Recommended</div>
+                </div>
+
+                <!-- Vercel Card -->
+                <div class="platform-card vercel">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="platform-icon">
+                            <i class="bi bi-triangle-fill"></i>
+                        </div>
+                        <h3 class="platform-name">Vercel</h3>
+                        <p class="platform-desc">Backup Server • High Performance</p>
+                        <div class="platform-status online">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Online</span>
+                        </div>
+                        <a href="https://visa-tracker-7sj03kgrv-jahed200525s-projects.vercel.app/" target="_blank" class="platform-btn">
+                            <span>Open Vercel</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cloudflare Card -->
+                <div class="platform-card cloudflare">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="platform-icon">
+                            <i class="bi bi-cloud-haze2-fill"></i>
+                        </div>
+                        <h3 class="platform-name">Cloudflare</h3>
+                        <p class="platform-desc">Global CDN • Fastest Worldwide</p>
+                        <div class="platform-status online">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Online</span>
+                        </div>
+                        <a href="https://8d01e9f9.visa-tracker-ehu.pages.dev/" target="_blank" class="platform-btn">
+                            <span>Open Cloudflare</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="card-badge fast">Fastest</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                    <h4>High Availability</h4>
+                    <p>Multiple platforms ensure 99.9% uptime</p>
+                </div>
+                <div class="info-card">
+                    <i class="bi bi-globe2"></i>
+                    <h4>Global Access</h4>
+                    <p>Servers across the world for fast loading</p>
+                </div>
+                <div class="info-card">
+                    <i class="bi bi-shield-check"></i>
+                    <h4>Secure & Safe</h4>
+                    <p>SSL encrypted connections on all platforms</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Last Updated Section -->
+        <section class="update-section">
+            <div class="refresh-card">
+                <i class="bi bi-clock-history"></i>
+                <div class="refresh-info">
+                    <span class="refresh-label">Page Last Checked</span>
+                    <span class="refresh-time" id="lastUpdated">Loading...</span>
+                </div>
+                <button class="refresh-btn" onclick="checkStatus()">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    Refresh Status
+                </button>
+                <button class="force-refresh-btn" onclick="forceRefresh()">
+                    <i class="bi bi-arrow-repeat"></i>
+                    Force Refresh
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="footer-content">
+                <p>Developed by <a href="https://github.com/mhjahed" target="_blank">MH Jahed</a></p>
+                <div class="footer-links">
+                    <a href="https://github.com/mhjahed/visa-tracker" target="_blank">
+                        <i class="bi bi-github"></i>
+                        GitHub
+                    </a>
+                    <a href="https://mhjahedportfolio.netlify.app" target="_blank">
+                        <i class="bi bi-globe"></i>
+                        Portfolio
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">© 2026 Australian Student Visa Tracker. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS with version -->
+    <script src="script.js?v=2.0.2"></script>
+</body>
+</html>
