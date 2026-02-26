@@ -10,17 +10,17 @@
     // 🔧 DEVELOPER: CHANGE THESE AS NEEDED
     // ============================================
     const SITE_VERSION = '2.0.2';
-    const LAST_UPDATE = "2026-02-25T13:30:00";   // Format: YYYY-MM-DDTHH:MM:SS
-    const NEXT_UPDATE = "2026-02-26T22:00:00";   // Must be FUTURE date!
+    const LAST_UPDATE = "2026-02-26T22:30:00";   // Format: YYYY-MM-DDTHH:MM:SS
+    const NEXT_UPDATE = "2026-02-27T22:00:00";   // Must be FUTURE date!
     // ============================================
 
     const VERSION_KEY = 'visa_status_version';
     
     // Platform URLs
     const platforms = {
-        netlify: 'https://699eaf22958c4eeebe3a38da--cheery-froyo-61cd3f.netlify.app/',
-        vercel: 'https://visa-tracker-7sj03kgrv-jahed200525s-projects.vercel.app/',
-        cloudflare: 'https://8d01e9f9.visa-tracker-ehu.pages.dev/'
+        netlify: 'https://69a07e7abe58d3008daef3c6--cheery-froyo-61cd3f.netlify.app/',
+        vercel: 'https://visa-tracker-71dvbi1jo-jahed200525s-projects.vercel.app/',
+        cloudflare: 'https://ba45925c.visa-tracker-ehu.pages.dev'
     };
 
     // ================================================
