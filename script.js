@@ -20,7 +20,7 @@
     const platforms = {
         netlify: 'https://699eaf22958c4eeebe3a38da--cheery-froyo-61cd3f.netlify.app/',
         vercel: 'https://visa-tracker-7sj03kgrv-jahed200525s-projects.vercel.app/',
-        cloudflare: 'https://3994487a.australia-visa-tracker.pages.dev/'
+        cloudflare: 'https://7ee75810.au-visa-tracker.pages.dev/'
     };
 
     // ================================================
